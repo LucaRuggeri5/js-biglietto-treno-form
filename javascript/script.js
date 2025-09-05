@@ -7,7 +7,9 @@ const button = document.querySelector('button');
 // selezioniamo il blocco di output
 const nomeOutput = document.getElementById("nomeoutput");
 const kmOutput = document.getElementById("kmoutput");
-const ageOutput = document.getElementById("etaoutput")
+const ageOutput = document.getElementById("etaoutput");
+const numCarrozza = document.getElementById("carrozza");
+const numCodiceOP = document.getElementById("codiceop");
 const prezzoOutput = document.getElementById("prezzobiglietto");
 // seleziono l'elemento form
 const mioForm = document.querySelector('form');
@@ -23,12 +25,14 @@ mioForm.addEventListener("submit",
             nomeOutput.innerHTML = nameValue;
             userField.value = "";
         }
+
         // output dei kilometri con input che sparisce
         const kmValue = kmField.value.trim();
         if (kmValue) {
             kmOutput.innerHTML = kmValue;
             kmField.value = "";
         }
+
         // output dell'età con input che sparisce
         const ageValue = ageField.value.trim();
         if (ageValue) {
@@ -36,6 +40,13 @@ mioForm.addEventListener("submit",
             ageField.value = "";
         }
 
+        // generazione numero carrozza
+        const carrozza = Math.floor(Math.random() * 10) + 1;
+        numCarrozza.innerHTML = carrozza;
+
+        // generazione CodiceOP
+        const codice = Math.floor(Math.random() * 10000) + 1;
+        numCodiceOP.innerHTML = codice;
 
         // prezzo biglietto
         let prezzoBiglietto = (0.21 * kmValue)
@@ -51,7 +62,7 @@ mioForm.addEventListener("submit",
 
         // output del prezzo con i decimali
         const priceValue = (prezzoBiglietto.toFixed(2));
-        prezzoOutput.innerHTML = priceValue;
+        prezzoOutput.innerHTML = `${priceValue}€`;
     }
 )
 
