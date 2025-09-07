@@ -4,43 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <title>Form Biglietto del treno</title>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <section>
-        <div>
-            <form action="">
-                <input type="text" id="username" placeholder="Nome e Cognome" required>
-
-                <input type="number" id="kilometri" placeholder="Km da percorrere" required>
-
-                <input type="number" id="anni" placeholder="Età" required>
-            
-                <button type="submit">Genera</button>
-            </form>
+    <section class="form">
+        <div class="container">
+            <div class="p-3 m-0 border-0 bd-example m-0 border-0">
+                <form class="row g-3 p-3 bg-danger-subtle border border-dark-subtle rounded-3">
+                    <div class="col-md-4">
+                        <label for="inputText" class="form-label">Nome e Cognome</label>
+                        <input type="text" class="form-control" id="username" placeholder="Mario Rossi">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputNumber" class="form-label">Kilometri da percorrere</label>
+                        <input type="number" class="form-control" id="kilometri" placeholder="Km">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputNumber" class="form-label">Età</label>
+                        <input type="number" class="form-control" id="anni" placeholder="">
+                    </div>
+                    <div class="col-12 ">
+                        <button type="submit" class="btn btn-secondary">Genera</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
-    <h4>Nome e Cognome Passeggero:</h4>
-    <p id="nomeoutput">...</p>
 
-    <h4>Kilometri da percorrere:</h4>
-    <p id="kmoutput">...</p>
+    <section class="biglietto">
+        <div class="container">
+            <div class="p-3 m-0 border-0 bd-example m-0 border-0 ">
+                <div class="row g-3 p-3 text-center bg-danger-subtle border border-dark-subtle rounded-3">
+                    <div class="col-md-2">
+                        <h4>Nome e Cognome Passeggero:</h4>
+                        <p id="nomeoutput">...</p>
+                    </div>
 
-    <h4>Età Passeggero:</h4>
-    <p id="etaoutput">...</p>
+                    <div class="col-md-2">
+                        <h4>Kilometri da percorrere:</h4>
+                        <p id="kmoutput">...</p>
+                    </div>
 
-    <h4>Carrozza</h4>
-    <p id="carrozza">...</p>
+                    <div class="col-md-2">
+                        <h4>Età Passeggero:</h4>
+                        <p id="etaoutput">...</p>
+                    </div>
 
-    <h4>Codice OP</h4>
-    <p id="codiceop">...</p>
+                    <div class="col-md-2">
+                        <h4>Carrozza</h4>
+                        <p id="carrozza">...</p>
+                    </div>
 
-    <h4>Prezzo del biglietto:</h4>
-    <p id="prezzobiglietto">...</p>
+                    <div class="col-md-2">
+                        <h4>Codice OP</h4>
+                        <p id="codiceop">...</p>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h4>Prezzo del biglietto:</h4>
+                        <p id="prezzobiglietto">...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
    
     <script defer src="javascript/script.js"></script>
 </body>
